@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>Light and Dark Mode</title>
   </head>
@@ -25,6 +26,7 @@
           <li><a href="">SERVICES</a></li>
           <li><a href="">HIRE ME</a></li>
         </ul>
+        <img src="moon.png" alt="" id="icon" />
       </nav>
       <div class="info">
         <h1>I'm <span>John</span> Doe</h1>
@@ -45,5 +47,14 @@
         <a href=""><span class="fab fa-dribbble-square"></span></a>
       </div>
     </div>
+    <script>
+      var icon = document.getElementById('icon');
+      icon.onclick = function () {
+        document.body.classList.toggle('dark-theme');
+        if (document.body.classList.contains('dark-theme'))
+          icon.src = 'sun.png';
+        else icon.src = 'moon.png';
+      };
+    </script>
   </body>
 </html>
